@@ -1,0 +1,6 @@
+Here i will write all the theoretical notes
+
+Array is data structure used to store many values
+
+In java every array is an object so when we create an array . we are actually creating an object on the heap. Unlike c/c++
+where a plain array is mpre like block of memory with soe syntactic sugar
