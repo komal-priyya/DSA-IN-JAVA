@@ -1,0 +1,8 @@
+while solving this contain duplicate problem i get to know abt hashnet i didn't knew this I was solving 
+question with simple method of forloop and was getting problem  thn i get to knew abt hashset with this
+we can solve duplicate problem easily=======Hashset is datastructure  in java that stores unique elements(no duplicates allowed) 
+
+its key points are:
+=> no duplicates
+=> doesn't maintain insertion order
+=> fast operations : checkng if an element exist is very quick(O(1)-constant time)
