@@ -27,3 +27,4 @@ I upload solutions daily with proper structure and clean code.
 
 ## 📂 Folder Structure
 /Arrays
+/basicMathForDsa
