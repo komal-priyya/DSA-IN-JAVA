@@ -26,10 +26,10 @@ public class LargestElement {
 public static int isLargestElement(int[] arr){
     int count=0;
 int n = arr.length;
-int max=0;
+int max=arr[0];
 for(int i=0;i<n-1;i++){
     if(arr[i] > max){
-        max=i;
+        max=arr[i];
         count++;
 System.out.println("count"+count);
 System.out.println(i);
@@ -38,42 +38,15 @@ System.out.println(i);
 return max;
 }
 public static void main(String[] args) {
-    int arr[]={2,9,4,6};
+    int arr[]={2,9,45,6};
     int result=isLargestElement(arr);
     System.out.println("max"+result);
 
 }
-
-
-
-
-
-
-public class LargestElement {
-    
-public static int isLargestElement(int[] arr){
-    
-int n = arr.length;
-
-int max=arr[0];
-for(int i=1;i<n;i++){
-    if(arr[i] > max){
-        max=arr[i];
-       
-
-
-    }
-}
-return max;
-}
-public static void main(String[] args) {
-    int arr[]={2,9,4,10};
-    int result=isLargestElement(arr);
-    System.out.println("max :"  +result);
-
 }
 
 
 
 
-}
+
+
