@@ -1,3 +1,33 @@
+/*
+Problem: Rotate Array  elements either left or right
+
+Approach:
+ I used the Reversal Algorithm to rotate the array eficiently in -place
+
+ --LEFT ROTATE by k
+   => Normalize k
+      k=k%n
+   => Reverse first k elements
+   =>Reverse remaining n-k elements   
+   =>Reverse the entire array
+
+ --RIGHT ROTATE by k 
+   =>Normalize k
+   k= k % n
+   =>Reverse the entire array
+   =>Reverse first k elements
+   =>Reverse remaining n-k elements
+   
+   
+
+   Time complexity: O(n)
+
+   Space complexity:    O(1)
+
+
+*/ 
+
+
 
 import java.util.Arrays;
 
