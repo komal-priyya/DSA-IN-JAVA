@@ -15,7 +15,7 @@ I solve problems consistently to improve problem-solving skills and prepare for 
 ---
 ## 📂 Topics
 - Arrays
-- 
+-
 
 ---
 
