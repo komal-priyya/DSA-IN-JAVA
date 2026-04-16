@@ -1,4 +1,27 @@
+/*
+Problem:Given an array of integers and a number num, find the index of num in the array.
+If the element is not present, return -1.
 
+   Approach (Linear Search):
+->Traverse the array from index 0 to n-1
+=>Compare each element with num
+->If match found → return index
+=>If loop ends → return -1
+
+Time Complexity:
+Worst Case: O(n) (element at end or not present)
+Best Case: O(1) (element at first index)
+
+
+Space Complexity:O(1)
+
+
+
+
+
+
+
+*/
 import java.util.Arrays;
 import java.util.Scanner;
 
