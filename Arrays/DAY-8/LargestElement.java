@@ -23,23 +23,23 @@ NO EXTRA SPACE IS USED (CONSTANT SPACE)
 
 public class LargestElement {
     
-public static int isLargestElement(int[] arr){
+public static int largestElement(int[] arr){
     int count=0;
 int n = arr.length;
 int max=arr[0];
 for(int i=0;i<n;i++){
     if(arr[i] > max){
         max=arr[i];
-        count++;
-System.out.println("count"+count);
-System.out.println(i);
+      
+
+
     }
 }
 return max;
 }
 public static void main(String[] args) {
-    int arr[]={2,9,45,6};
-    int result=isLargestElement(arr);
+    int arr[]={2,89,45,6};
+    int result=largestElement(arr);
     System.out.println("max"+result);
 
 }
