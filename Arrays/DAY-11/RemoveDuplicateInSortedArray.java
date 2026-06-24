@@ -43,6 +43,8 @@ public class RemoveDuplicateInSortedArray {
             j++;
 
         }
+
+      
          System.out.print("Array after removing duplicates: ");
         for (int k = 0; k <= i; k++) {
             System.out.print(arr[k] + " ");
