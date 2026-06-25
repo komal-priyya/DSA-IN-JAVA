@@ -47,7 +47,8 @@ public class RotateArrayByKElements {
         k = k % n;
 
         Reverse(arr2, 0, n - 1);     
-        Reverse(arr2, 0, k - 1);     
+        Reverse(arr2, 0, k - 1);    
+        Reverse(arr2, k, n - 1);  
     }
     public static void Reverse(int[] arr, int start, int end){
  while (start < end) {
