@@ -29,28 +29,28 @@ O(1)       // excluding result (no extra DS used)
 import java.util.*;
 
 public class UnionSortedArrays {
-    public static void union(int[] arr1, int[] arr2) {
+    public static ArrayList<Integer>findUnion(int[] arr1, int[] arr2) {
 
         int i = 0, j = 0;
-        ArrayList<Integer> result = new ArrayList<>();
+        ArrayList<Integer> Union= new ArrayList<>();
 
         while(i < arr1.length && j < arr2.length){
 
             if(arr1[i] < arr2[j]){
-                if(result.size() == 0 || result.get(result.size()-1) != arr1[i]){
-                    result.add(arr1[i]);
+                if(Union.size() == 0 || Union.get(Union.size()-1) != arr1[i]){
+                    Union.add(arr1[i]);
                 }
                 i++;
             }
             else if(arr1[i] > arr2[j]){
-                if(result.size() == 0 || result.get(result.size()-1) != arr2[j]){
-                    result.add(arr2[j]);
+                if(Union.size() == 0 || Union.get(Union.size()-1) != arr2[j]){
+                    Union.add(arr2[j]);
                 }
                 j++;
             }
             else{
-                if(result.size() == 0 || result.get(result.size()-1) != arr1[i]){
-                    result.add(arr1[i]);
+                if(Union.size() == 0 || Union.get(Union.size()-1) != arr1[i]){
+                    Union.add(arr1[i]);
                 }
                 i++;
                 j++;
@@ -59,26 +59,27 @@ public class UnionSortedArrays {
 
         // remaining elements
         while(i < arr1.length){
-            if(result.get(result.size()-1) != arr1[i]){
-                result.add(arr1[i]);
+            if(Union.get(Union.size()-1) != arr1[i]){
+                Union.add(arr1[i]);
             }
             i++;
         }
 
         while(j < arr2.length){
-            if(result.get(result.size()-1) != arr2[j]){
-                result.add(arr2[j]);
+            if(Union.get(Union.size()-1) != arr2[j]){
+                Union.add(arr2[j]);
             }
             j++;
         }
 
-        System.out.println(result);
+     return Union;
     }
 
     public static void main(String[] args) {
-        int[] arr1 = {1,2,3};
-        int[] arr2 = {2,3,4};
+        int[] arr1 = {1,1,2,3,4,5};
+        int[] arr2 = {2,3,4,4,5,6};
 
-        union(arr1, arr2);
+       ArrayList<Integer> Result= findUnion(arr1, arr2);
+       System.out.println("union of arr and arr2 : " + Result);
     }
 }
