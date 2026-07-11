@@ -33,49 +33,38 @@ import java.util.Scanner;
 
 public class IntersectionOfTwoSortedArrays {
 
-    public static void intersection(int n, int[] arr1, int[] arr2) {
+    public static ArrayList<Integer> intersection(int n, int[] arr1, int[] arr2) {
 
-        int i = 0;
-        int j = 0;
-        ArrayList<Integer> result = new ArrayList<>();
-        while (i < arr1.length && j < arr2.length) {
-            if (arr1[i] < arr2[j]) {
-                if (result.size() == 0 || result.get(result.size() - 1) != arr1[i]) {
-                    i++;
-                }
-            } else if (arr1[i] > arr2[j]) {
-                if (result.size() == 0 || result.get(result.size() - 1) != arr1[i]) {
-                    j++;
-                }
-            } else {
-                if (result.size() == 0 || result.get(result.size() - 1) != arr1[i]) {
-                    result.add(arr1[i]);
-                    i++;
-                    j++;
-                }
+       int i = 0;
+int j = 0;
+ArrayList<Integer> Intersection= new ArrayList<>();
 
-            }
-        }
-        while(i<arr1.length){
- if (result.size() == 0 || result.get(result.size() - 1) != arr1[i]) {
-                   result.add(arr1[i]);  
-        }}
-    while(i<arr1.length){
- if (result.size() == 0 || result.get(result.size() - 1) != arr1[i]) {
-                   result.add(arr2[i]);  
-        }
+while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] == arr2[j]) {
+        Intersection.add(arr1[i]);  // ✅ Add the match
+        i++;
+        j++;
     }
+    else if (arr1[i] < arr2[j]) {
+        i++;  // ✅ arr1 needs to catch up
+    }
+    else {
+        j++;  // ✅ arr2 needs to catch up
+    }
+}
 
-        System.out.println( "Intersection" +  result);
+return Intersection;
     }
     public static void main(String[] args) {
 
         Scanner Inp = new Scanner(System.in);
 
-        System.out.println("Enter the size of Array");
+        System.out.println("Enter the size of Array1");
         int n = Inp.nextInt();
-
+ System.out.println("Enter the size of Array2");
+int m = Inp.nextInt();
         int[] arr1 = new int[n];
+
         int[] arr2 = new int[n];
 
         System.out.println("Enter the Elements of first Array ");
@@ -84,10 +73,11 @@ public class IntersectionOfTwoSortedArrays {
         }
 
         System.out.println("Enter the Elements of first Array ");
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < m; i++) {
             arr2[i] = Inp.nextInt();
         }
 
-        intersection(n, arr1, arr2);
+        ArrayList<Integer>Result=intersection(n, arr1, arr2);
+        System.out.println("Intersection of arr1 and arr2 : " + Result);
     }
     }
