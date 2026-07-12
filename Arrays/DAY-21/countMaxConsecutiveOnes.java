@@ -39,11 +39,13 @@ public class countMaxConsecutiveOnes {
           for(int i=0; i<n; i++){
               if(arr[i]==1){
                  counter++;
-                 max= Math.max(max,counter);
+               
               }
             else{
+             
                counter=0;
           }
+               max= Math.max(max,counter);
           }
    return max;
 
